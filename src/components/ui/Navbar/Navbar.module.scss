@@ -1,0 +1,27 @@
+.linknav {
+  a::after {
+    content: '';
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    background-color: black;
+    height: 2px;
+    width: 0px;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  a:hover::after {
+    content: '';
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    background-color: #f68a53;
+    height: 2px;
+    width: 50%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+}
