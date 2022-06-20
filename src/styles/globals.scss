@@ -5,11 +5,9 @@
 html,
 body {
   @apply text-white;
-  background: linear-gradient(90deg, #000000 50%, #ffffff 50%);
+  // background: linear-gradient(90deg, #000000 50%, #ffffff 50%);
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -18,6 +16,6 @@ a {
 }
 
 * {
-  @apply font-sans;
+  font-family: 'SpaceGrotesk', sans-serif;
   box-sizing: border-box;
 }

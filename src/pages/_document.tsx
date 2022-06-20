@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags */
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
@@ -5,16 +6,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel='preconnect' href='https://fonts.googleapis.com' />
-          <link
-            rel='preconnect'
-            href='https://fonts.gstatic.com'
-            crossOrigin='true'
-          />
-          <link
-            href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap'
-            rel='stylesheet'
-          />
+          <link href='/fonts/styles.css' rel='stylesheet' />
         </Head>
         <body>
           <Main />
