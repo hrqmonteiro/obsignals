@@ -1,7 +1,6 @@
-// @ts-ignore
 import { ChromeButton } from 'components/ui'
 import cn from 'classnames'
-import s from './Hero.module.scss'
+import s from './About.module.scss'
 
 export default function About(): JSX.Element {
   return (
@@ -58,7 +57,12 @@ export default function About(): JSX.Element {
           </div>
         </div>
         {/* image */}
-        <div className='w-full md:w-full lg:w-1/2 flex justify-center items-center bg-white'>
+        <div
+          className={cn(
+            s.aboutimg,
+            'w-full md:w-full lg:w-1/2 flex justify-center items-center bg-white'
+          )}
+        >
           <img src='/assets/about.png' alt='obsignals' />
         </div>
       </div>

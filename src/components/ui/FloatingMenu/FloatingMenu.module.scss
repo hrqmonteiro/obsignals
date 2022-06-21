@@ -1,0 +1,45 @@
+.floatingmenu {
+  position: fixed;
+  left: -6rem;
+  bottom: 50%;
+  @apply rotate-90 uppercase text-sm;
+
+  ul {
+    display: flex;
+
+    li {
+      a {
+        margin-right: 1rem;
+
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.699);
+          transition: all 0.2s ease;
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: -40px;
+    bottom: 50%;
+    height: 2px;
+    width: 33px;
+    background: linear-gradient(135deg, #2fc4d1 0%, #4f54f1 50%, #c86dd7 100%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    right: -40px;
+    bottom: 50%;
+    height: 2px;
+    width: 33px;
+    background: linear-gradient(135deg, #2fc4d1 0%, #4f54f1 50%, #c86dd7 100%);
+  }
+}

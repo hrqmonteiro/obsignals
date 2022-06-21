@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import { Logo } from 'components/ui'
 import Link from 'next/link'
 import cn from 'classnames'
 import { FiMenu, FiX } from 'react-icons/fi'
-import { useState } from 'react'
+import Flag from 'react-flags'
 
 export default function MobileNavbar(): JSX.Element {
   const [showMenu, setShowMenu] = useState<boolean>(false)
+  const [dropdown, setDropdown] = useState<boolean>(false)
+  const [currentLanguage, setCurrentLanguage] = useState<String>('EN')
 
   return (
     <>
@@ -25,7 +28,66 @@ export default function MobileNavbar(): JSX.Element {
             />
           </label>
           <Logo width={100} />
-          <div>EN</div>
+          <div className='dropdown dropdown-end text-white'>
+            <button
+              onClick={() => setDropdown(!dropdown)}
+              style={{
+                borderRadius: '12px',
+                borderWidth: '1px',
+                borderColor: '#505050'
+              }}
+              className='lg:py-3 lg:px-8 p-3 hover:opacity-80 transition-all duration-300 text-white'
+            >
+              <div className='flex items-center'>
+                <Flag
+                  basePath='/img/flags'
+                  name='USA'
+                  format='png'
+                  pngSize={24}
+                  shiny={true}
+                  className='mr-2 w-full h-full'
+                />
+                <span>{currentLanguage}</span>
+              </div>
+            </button>
+            {dropdown && (
+              <ul
+                tabIndex={0}
+                className='dropdown-content mt-2 menu p-2 shadow bg-base-100 rounded-box w-52'
+              >
+                <li>
+                  <a>
+                    <div className='flex items-center'>
+                      <Flag
+                        basePath='/img/flags'
+                        name='ESP'
+                        format='png'
+                        pngSize={24}
+                        shiny={true}
+                        className='mr-2 w-full h-full'
+                      />
+                      <span>ES</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <div className='flex items-center'>
+                      <Flag
+                        basePath='/img/flags'
+                        name='BRA'
+                        format='png'
+                        pngSize={24}
+                        shiny={true}
+                        className='mr-2 w-full h-full'
+                      />
+                      <span>PT</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            )}
+          </div>
         </div>
       </div>
 
