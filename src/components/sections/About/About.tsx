@@ -4,7 +4,10 @@ import s from './About.module.scss'
 
 export default function About(): JSX.Element {
   return (
-    <section id='about' className='h-screen flex justify-center items-center'>
+    <section
+      id='about'
+      className='min-h-screen lg:h-screen flex justify-center items-center mb-black'
+    >
       <div className='h-full w-full flex flex-wrap'>
         {/* Texts */}
         <div className='w-full md:w-full lg:w-1/2 bg-black flex flex-wrap justify-center items-center px-6 py-20'>
