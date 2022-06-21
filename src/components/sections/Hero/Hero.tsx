@@ -8,7 +8,7 @@ export default function Hero(): JSX.Element {
     <div className='h-screen flex justify-center items-center'>
       <div className='h-full w-full flex flex-wrap'>
         {/* Texts */}
-        <div className='w-full md:w-full lg:w-1/2 bg-black flex flex-wrap justify-center items-center px-6 py-20'>
+        <div className='w-full md:w-full lg:w-1/2 bg-black flex flex-wrap justify-center items-center px-6 pt-36 pb-20'>
           <div>
             <h1 data-aos-delay='200' className='font-bold text-5xl mb-10'>
               Signals for Binary Options
