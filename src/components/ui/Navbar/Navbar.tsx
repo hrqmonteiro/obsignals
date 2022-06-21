@@ -6,7 +6,7 @@ import cn from 'classnames'
 
 export default function Navbar(): JSX.Element {
   return (
-    <div className='md:fixed lg:fixed z-50 top-0 w-full navbar px-14'>
+    <div className='fixed z-50 top-0 w-full navbar px-14'>
       {/* <div className='container mx-auto'> */}
       <div className='w-full hidden lg:flex flex-nowrap items-center justify-between p-5'>
         {/* first half */}
@@ -20,7 +20,7 @@ export default function Navbar(): JSX.Element {
                 </Link>
               </li>
               <li className='mx-10 hover:opacity-80 transition-all duration-300'>
-                <Link href='#'>
+                <Link href='#about'>
                   <a>About obsignals</a>
                 </Link>
               </li>
@@ -33,12 +33,12 @@ export default function Navbar(): JSX.Element {
             {/* links */}
             <ul className={cn(s.linknav, 'flex')}>
               <li className='mx-10 hover:opacity-80 transition-all duration-300'>
-                <Link href='#'>
+                <Link href='#download'>
                   <a>Download</a>
                 </Link>
               </li>
               <li className='mx-10 hover:opacity-80 transition-all duration-300'>
-                <Link href='#'>
+                <Link href='#instruction'>
                   <a>Instruction</a>
                 </Link>
               </li>

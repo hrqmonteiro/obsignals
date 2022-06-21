@@ -1,5 +1,5 @@
-import { About, Hero } from 'components/sections'
-import { Container, Navbar } from 'components/ui'
+import { About, Download, Hero } from 'components/sections'
+import { Container, MobileNavbar, Navbar } from 'components/ui'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -10,8 +10,13 @@ const Home: NextPage = () => {
         <title>OBSignals</title>
       </Head>
 
+      <Navbar />
+
+      <MobileNavbar />
+
       <Hero />
       <About />
+      <Download />
     </>
   )
 }

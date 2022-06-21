@@ -1,3 +1,4 @@
+// @ts-ignore
 import { ChromeButton } from 'components/ui'
 import cn from 'classnames'
 import s from './Hero.module.scss'
@@ -5,10 +6,10 @@ import s from './Hero.module.scss'
 export default function Hero(): JSX.Element {
   return (
     <div className='h-screen flex justify-center items-center'>
-      <div className='h-full w-full flex flex-nowrap'>
+      <div className='h-full w-full flex flex-wrap'>
         {/* Texts */}
-        <div className='w-1/2 bg-black flex flex-wrap justify-center items-center px-6'>
-          <p data-aos='fade-up' data-aos-offset='500' data-aos-duration='500'>
+        <div className='w-full md:w-full lg:w-1/2 bg-black flex flex-wrap justify-center items-center px-6 py-10'>
+          <div>
             <h1 data-aos-delay='200' className='font-bold text-5xl mb-10'>
               Signals for Binary Options
             </h1>
@@ -17,18 +18,12 @@ export default function Hero(): JSX.Element {
               binary options market, including OTC.
             </div>
             <ChromeButton />
-          </p>
+          </div>
         </div>
         {/* image */}
-        <div
-          data-aos='fade-down'
-          data-aos-offset='500'
-          data-aos-duration='500'
-          className={cn(
-            s.heroimg,
-            'w-1/2 flex justify-center items-center bg-white'
-          )}
-        ></div>
+        <div className='w-full md:w-full lg:w-1/2 flex justify-center items-center bg-white'>
+          <img src='/assets/home.png' alt='obsignals' />
+        </div>
       </div>
     </div>
   )
