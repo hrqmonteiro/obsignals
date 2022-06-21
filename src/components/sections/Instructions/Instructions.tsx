@@ -2,10 +2,7 @@ import { ChromeButton } from 'components/ui'
 
 export default function Instructions(): JSX.Element {
   return (
-    <section
-      id='about'
-      className='min-h-screen lg:h-screen flex justify-center items-center'
-    >
+    <section id='about' className='h-screen flex justify-center items-center'>
       <div className='h-full w-full flex flex-wrap'>
         {/* Texts */}
         <div className='w-full md:w-full lg:w-1/2 bg-black flex flex-wrap justify-center items-center px-6 py-20'>

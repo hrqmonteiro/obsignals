@@ -5,7 +5,7 @@ import s from './Hero.module.scss'
 
 export default function Hero(): JSX.Element {
   return (
-    <div className='min-h-screen lg:h-screen flex justify-center items-center'>
+    <div className='h-screen flex justify-center items-center'>
       <div className='h-full w-full flex flex-wrap'>
         {/* Texts */}
         <div className='w-full md:w-full lg:w-1/2 bg-black flex flex-wrap justify-center items-center px-6 pt-36 pb-20'>
